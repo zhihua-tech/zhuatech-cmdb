@@ -1,0 +1,53 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "discoveryAgeDays": "#3",
+      "missingLinks": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "maxAgeDays": "2"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "confirmedLinks": "3"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "missingLinks": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "ownerAssigned": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "lastDiscovered": "2026-10-24"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "confirmedLinks": "5"
+    },
+    "expected": {},
+    "error": true
+  }
+]
